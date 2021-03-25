@@ -1,0 +1,193 @@
+// Include custom veriables default overrides here
+$primary: rgb(127, 24, 127);
+$primary-opacity-8: rgba(127, 24, 127, 0.8);
+$gray: #E6E6E6;
+$sale: rgba(167, 4, 4, 0.8);
+$headings-font-family: 'Nunito', sans-serif;
+$headings-font-weight: 800;
+$font-family-base: 'Poppins', sans-serif;
+
+$theme-colors: (
+  "primary": $primary,
+  "primary-opacity-8": $primary-opacity-8,
+  "gray": $gray,
+  "sale": $sale
+);
+
+// Create your own map
+$custom-color: (
+  "icon-background": rgba(127, 24, 127, 0.2)
+);
+
+// Merge maps
+$theme-colors: map-merge($theme-colors, $custom-color);
+
+
+$utilities: (
+  "rounded": (
+    property: border-radius,
+    class: rounded,
+    values: (
+      null: 1rem,
+      circle: 50%
+    )
+  )
+);
+
+@import "./bootstrap/scss/bootstrap";
+
+// Add custom code after this
+
+
+
+/************** HEADER **************/
+.announcement-bar {
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--bs-gray);
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0 -10px;
+
+    li {
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+
+      .bi {
+        background-color: var(--bs-icon-background);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin-right: 6px;
+      }
+
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+}
+
+
+.site-header {
+  .aws-search-field {
+    font-size: 0.9rem;
+    padding-left: 1.4rem;
+    border-radius: 20px!important;
+  }
+}
+
+
+
+/* Main Menu */
+.main-navigation {
+  font-weight: 600;
+
+  .current-menu-item {
+    background-color: rgb(149, 33, 149);
+  }
+
+  a {
+    text-transform: uppercase;
+    color: var(--bs-white);
+    padding: 0.6rem 1.4rem;
+  }
+
+  a:hover {
+    background-color: rgb(149, 33, 149);
+  }
+
+
+  .menu-toggle {
+    background-color: $primary;
+    color: $white;
+    border: none;
+  }
+
+  .sub-menu {
+    li {
+      background-color: $primary;
+    }
+  }
+
+}
+
+
+/************* FRONT PAGE *************/
+
+/************** SLIDER **************/
+.carousel {
+  .carousel-control-prev, .carousel-control-next {
+    width: 9%;
+  }
+}
+
+
+
+
+/************** CATEGORIES **************/
+.categories {
+  background-color: #F9F9F9;
+
+  .categories__col {
+    height: 212px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+    .categories__col {
+      height: 336px;
+    }
+  }
+  
+}
+
+
+
+
+/************** FOOTER **************/
+.site-footer {
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      display: block;
+      padding: 0.3rem 0;
+    }
+
+    a:hover { text-decoration: underline; }
+
+  }
+
+}
+
+.popular-products, .special-offers {
+
+  .add_to_cart_button {
+    display: block!important;
+    text-align: center;
+  }
+
+  .attachment-woocommerce_thumbnail {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+}

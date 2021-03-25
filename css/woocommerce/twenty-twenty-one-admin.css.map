@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;GAEG;AACH,AAII,SAJK,AAAA,iBAAiB,CACzB,KAAK,AAAA,cAAc,CAClB,EAAE,AAAA,aAAa,CACd,EAAE,AAAA,MAAM,CACP,GAAG,CAAC;EACH,SAAS,EAAE,eAAe;CAC1B",
+    "sources": [
+        "twenty-twenty-one-admin.scss"
+    ],
+    "names": [],
+    "file": "twenty-twenty-one-admin.css"
+}
